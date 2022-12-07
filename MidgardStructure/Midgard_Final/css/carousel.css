@@ -1,0 +1,148 @@
+body{
+    padding-bottom: 0;
+}
+
+.contenedor{ /* AQUI SE ESTABLECE QUE LA PAGINA SE AJUSTE AL ALTO DEL MONITOR*/
+    height: 100vh;
+    padding-top: 84px;
+}
+
+.menuCarrusel{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    line-height: 40px;
+    border-radius: 20px;
+    color: white;
+    width: 200px;
+}
+
+.menuCarrusel p{
+    font-weight: 700;
+}
+
+.menuCarrusel button{
+    border: none;
+    background: none;
+    color: white;
+}
+
+.carousel-publicaciones{
+    animation: fadeIn 1s;
+}
+
+.carrusel-contenido {
+    display: grid;
+    grid-template-rows: 1fr;
+    max-height: 100vh;
+}
+
+/* ESTILO SOLO PARA LA IMAGEN */
+
+.soloimg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.soloimg > img {
+    width: 90%;
+    height: 80vh; /*DEFINE EL ALTO DE LA IMAGEN (90vh para pantalla)*/
+}
+
+/* ESTILO SOLO PARA EL TEXTO */
+
+.txt{
+    background: rgba(36, 33, 35, 0.8) none repeat scroll 0 0;
+    border-radius: 10px;
+    color: white;
+    display: table;
+    height: 80vh!important; /*DEFINE EL ALTO DE LA CAPA DEL TEXTO (90vh para pantalla)*/
+}
+
+.txt div{
+    width: 100vw;
+    display: table-cell;
+    vertical-align: middle;
+    max-height: 100vh;
+}
+
+.txt h3, .txtimg-txt div h3{
+    font-size: 3vw!important;
+}
+
+.txt p, .txtimg-txt div p{
+    font-size: 1vw!important;
+}
+
+/* ESTILO PARA IMAGEN Y TEXTO*/
+
+.txtimg {
+    height: 80vh!important; /*DEFINE EL ALTO DE LA CAPA DEL TEXTO (90vh para pantalla)*/
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.txtimg-txt{
+    background: rgba(36, 33, 35, 0.8) none repeat scroll 0 0;
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    display: table;
+}
+.txtimg-txt div{
+    width: 100vw;
+    display: table-cell;
+    vertical-align: middle;
+    max-height: 100vh;
+}
+
+.txtimg-img img{
+    height: 80vh; /*DEFINE EL ALTO DE LA IMAGEN (90vh para pantalla)*/
+}
+
+.carousel-indicators{
+    margin-bottom: -2rem;
+}
+
+@media (max-width: 1100px) {
+    /* SOLO IMG */
+    .soloimg{
+        height: auto;
+    }
+    .soloimg > img {
+        width: 100%;
+        height: auto; /*DEFINE EL ALTO DE LA IMAGEN (100vh para pantalla)*/
+    }
+
+    /* SOLO TEXTO */
+    .txt {
+        height: auto!important;
+    }
+    .txt h3, .txtimg-txt div h3{
+        font-size: 6vw!important;
+    }
+    .txt p, .txtimg-txt div p{
+        font-size: 3vw!important;
+    }
+
+    /* AMBAS */
+    .txtimg{
+        display: flex;
+        flex-direction: column;
+        height: auto!important;
+    }
+    .txtimg-img img{
+        height: auto!important; /*DEFINE EL ALTO DE LA IMAGEN (90vh para pantalla)*/
+    }
+}
+
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
